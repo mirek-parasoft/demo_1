@@ -16,3 +16,10 @@ TEST(GooTest, TestGetValueWithPositive) {
 
   EXPECT_EQ(getValue(5, 5), 25);
 }
+
+TEST(GooTest, TestGetValueWithMixed) {
+  RecordProperty("cpptest_filename", __FILE__);
+  RecordProperty("req", "REQ-123-POSITIVE");
+
+  EXPECT_EQ(getValue(5, 0), 5);
+}
